@@ -1,0 +1,5 @@
+*.py[cod]
+last_level.*
+generator/configs/
+game/puzzles.json
+game/puzzles.txt

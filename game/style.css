@@ -1,0 +1,167 @@
+
+/* general stuff */
+/************************************************************/
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+    font-family: "Open Sans";
+}
+
+p, h2 {
+    margin: 0 0 5px 20px;
+}
+
+p, h3 {
+    font-size: 12pt;
+}
+
+.text {
+    margin-left: 50px;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+.mid-row-header {
+    margin-top: 30px;
+}
+
+h1 {
+    margin: 5px 20px;
+}
+
+#content {
+    display: flex;
+}
+
+#content-player {
+    min-width: 900px;
+    max-width: 900px;
+}
+
+#content-viewer {
+    min-width: 640px;
+    max-width: 640px;
+}
+
+#content-puzzle-list {
+    min-width: 100px;
+}
+
+.game-gui {
+    font-size: 16pt;
+}
+
+#puz-unsolved {
+    font-weight: bold;
+    color: #aa0000;
+}
+
+#puz-solved {
+    font-weight: bold;
+    color: #00aa00;
+}
+
+button {
+    width: 270px;
+    margin-right: 10px;
+}
+
+/* PROGRESSION VIZ */
+/************************************************************/
+
+.li_odd {
+    background-color: #ddd;
+}
+
+#mastery_list, #curr_list {
+    list-style: none;
+}
+
+.cweight {
+    display: inline-block;
+    width: 25px;
+}
+
+.cname {
+    display: inline-block;
+    width: 350px;
+}
+
+.cval, .cval0 {
+    display: inline-block;
+}
+
+.cval {
+    color: #060;
+}
+
+.cval0 {
+    font-weight: bold;
+    color: #600;
+}
+
+#current-cost, #target-cost {
+    font-weight: bold;
+}
+
+/* BOARD SVG */
+/************************************************************/
+
+svg * {
+    -moz-user-select: -moz-none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+svg text {
+    cursor: default;
+}
+
+g.grid line {
+    stroke: #666666;
+    stroke-width: 1px;
+}
+
+g.grid text {
+    font-size: 10pt;
+    fill: #666666;
+}
+
+g.grid text.title {
+    font-size: 18pt;
+    fill: #666666;
+}
+
+g.piece.draggable {
+    cursor: pointer;
+}
+
+g.piece text {
+    font-size: 17pt;
+    font-weight: bold;
+    text-anchor: middle;
+}
+
+g.piece text.source {
+    fill: #ddccff;
+}
+
+g.piece text.target {
+    fill: #ffffaa;
+}
+
+line.laser {
+    stroke: green;
+}
+
+g.piece text.shadow {
+    fill: black;
+    fill-opacity: .7;
+}
+

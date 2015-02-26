@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Infinite Refraction: Puzzle Viewer</title>
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,700italic">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic,700italic">
+    <link rel="stylesheet" type="text/css" href="lib/normalize/normalize.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="lib/jquery/jquery.js"></script>
+    <script src="lib/lodash/lodash.js"></script>
+    <script src="lib/d3/d3.js"></script>
+    <script src="js/board.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+      $(function() {
+        App.start_viewer();
+      });
+    </script>
+  </head>
+  <body>
+    <header id="header">
+      <h1>Puzzle Viewer for Infinite Refraction</h1>
+    </header>
+    <div id="content">
+      <div id="content-viewer">
+        <svg id="game-svg" width="640" height="650"></svg>
+      </div>
+      <div id="content-puzzle-list">
+        <select size="30" id="puzzle-list"></select>
+      </div>
+      <div id="content-progression-viz">
+        <h2>Current Puzzle Features:</h2>
+        <p>Click on a selection to display that puzzle. Or you can <a href="index.html">play the game</a> with these puzzles</p>
+        <p>Columns are: Weight, Name. Features are calculated by analyzing the structure of puzzles' solutions.</p>
+        <ul id="curr_list"></ul>
+      </div>
+    </div>
+  </body>
+</html>

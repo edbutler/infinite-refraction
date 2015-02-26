@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Infinite Refraction</title>
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,700italic">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic,700italic">
+    <link rel="stylesheet" type="text/css" href="lib/normalize/normalize.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="lib/jquery/jquery.js"></script>
+    <script src="lib/lodash/lodash.js"></script>
+    <script src="lib/d3/d3.js"></script>
+    <script src="js/progression.js"></script>
+    <script src="js/board.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+      $(function() {
+        App.start_game();
+      });
+    </script>
+  </head>
+  <body>
+    <header id="header">
+      <h1>Infinite Refraction</h1>
+    </header>
+    <div id="content">
+      <div id="content-player">
+        <p class="game-gui">Puzzle Status: <span id="puz-unsolved">Unsolved</span><span id="puz-solved">Solved!</span></p>
+        <svg id="game-svg" width="900" height="650"></svg>
+        <p class="game-gui"><button id="btn-advance" title="You don't need to complete the puzzle to advance, since this is a demo of the progression system.">Advance to Next Puzzle</button> Advances the progression counting this puzzle as a win.</p>
+        <p class="game-gui"><button id="btn-abort" title="This will give you a slightlier easier puzzle.">Try a Different Puzzle</button> Advances the progression counting this puzzle as a loss.</p>
+        <h2 class="mid-row-header">What is This?</h2>
+        <p class="text">This is <i>Infinite Refraction</i>, part of a research project exploring computers designing games. It's a version of the math puzzle game <a href="http://centerforgamescience.org/portfolio/refraction/"><i>Refraction</i></a> where the puzzles and progression are generated entirely by computer. The puzzles are pre-generated so you'll have to read the <a href="https://github.com/edbutler/infinite-refraction">source code</a> to see how that works, but the progression is created in Javascript. You can see the internal state of the progression system on the right. You also don't actually have to complete the puzzles and can instead skip around using the buttons below the game board.</p>
+        <p class="text">You can also view each individual puzzle and its solutions and features with the <a href="viewer.html">puzzle viewer</a>.</p>
+        <p class="text">Currently, the only written details of how this stuff works are a few academic papers, but hopefully I'll get around to writing more accessible explanations soon. In the meantime, you can <a href="http://www.ericbutler.net/media/papers/chi2015_progression.pdf">read the paper</a> about the game, or dig into the <a href="https://github.com/edbutler/infinite-refraction">source code</a>.</p>
+        <p class="text">Created by <span class="credits"></span>, <span class="credits"></span>, <span class="credits"></span>, and many others at the <a href="http://centerforgamescience.org/">Center for Game Science</a> that worked on the original <i>Refraction</i>.</p>
+      </div>
+      <div id="content-progression-viz">
+        <h2>Visualization of Player Model and Progression</h2>
+        <p>Columns are: Weight, Name, # Puzzles Won. Features are calculated by analyzing the structure of puzzles' solutions.</p>
+        <h3>Current Puzzle Features:</h3>
+        <ul id="curr_list"></ul>
+        <p>Cost of Current Puzzle: <span id="current-cost"></span></p>
+        <p>Target Cost: <span id="target-cost"></span></p>
+        <h3>Full Player Model:</h3>
+        <ul id="mastery_list"></ul>
+      </div>
+    </div>
+  </body>
+</html>
