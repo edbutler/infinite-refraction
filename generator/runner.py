@@ -53,7 +53,7 @@ def do_configure(args):
     config_dir = os.path.join(localdir, 'configs')
     mkdir_p(config_dir)
 
-    models = solver.extract_models_from_outf2(output)
+    models = solver.extract_all_models_from_outf2(output)
     for idx, witness in enumerate(models):
         with open(os.path.join(config_dir, 'batch.%d.lp' % idx), 'w') as f:
             f.write("\n".join([r + "." for r in witness]))
