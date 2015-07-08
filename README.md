@@ -74,7 +74,7 @@ Copyright their original authors.
 ## References
 
 Related research:
-- [Automatic Game Progression Design through Analysis of Solution Features](http://www.ericbutler.net/media/papers/chi2015_progression.pdf)
-- [Quantifying over Play: Constraining Undesirable Solutions in Puzzle Design](http://www.ericbutler.net/media/papers/fdg2013_shortcuts.pdf)
+- [Automatic Game Progression Design through Analysis of Solution Features](http://www.ericbutler.net/assets/papers/chi2015_progression.pdf)
+- [Quantifying over Play: Constraining Undesirable Solutions in Puzzle Design](http://www.ericbutler.net/assets/papers/fdg2013_shortcuts.pdf)
 - [A Case Study of Expressively Constrainable Level Design Automation Tools for a Puzzle Game](https://adamsmith.as/papers/fdg2012generation.pdf)
 
